@@ -1,0 +1,23 @@
+  .notifications {
+    display: none;
+
+    position: fixed;
+
+    bottom: 2rem;
+
+    left: 50%;
+
+    width: 15rem;
+
+    background-color: black;
+
+    transform: translateX(-50%);
+
+    color: #fff;
+
+    padding: 1.2rem;
+
+    text-align: center;
+
+    z-index: 999999;
+  }

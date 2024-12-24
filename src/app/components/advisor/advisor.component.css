@@ -1,0 +1,3 @@
+  input[type="date"].no-calendar-icon::-webkit-calendar-picker-indicator {
+    opacity:0;
+  }
