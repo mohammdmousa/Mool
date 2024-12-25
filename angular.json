@@ -40,11 +40,9 @@
             ],
             "styles": [
           "src/assets/css/slick.css",
-                    "src/assets/css/slick-theme.css",
-
-                    "src/assets/css/default.css",
-
-                    "src/assets/css/style.css"
+          "src/assets/css/slick-theme.css",
+          "src/assets/css/default.css",
+          "src/assets/css/style.css"
 
             ],
             "scripts": [
