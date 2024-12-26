@@ -1,9 +1,13 @@
 .mousa {
   display: block;
-  height: 120px;
+  height: 150px;
   background: linear-gradient(
     90deg,
     rgba(16, 24, 32, 1) 0%,
     rgba(16, 24, 32, 78%) 100%
   );
+}
+.bartner
+{
+  margin: 50px 0;
 }
