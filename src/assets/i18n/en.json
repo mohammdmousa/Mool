@@ -1,4 +1,26 @@
 {
-  "HELLO": "Hello",
-  "WELCOME": "Welcome to our website!"
+  "allShops": "All Shops",
+  "designersClub": "Designers Club",
+  "beOurPartner": "Be Our Partner",
+  "liveTheArtOfLiving": "Live the Art of Living",
+  "atTheArtOfLivingMall": "at the Art of Living Mall",
+  "home": "Home",
+  "offers": "Offers",
+  "events": "Events",
+  "aboutTheMall": "About The Mall",
+  "planYourVisit": "Plan Your Visit",
+  "shoppingAdvisor": "Shopping Advisor",
+  "dine": "Dine",
+  "blog": "Blog",
+  "shop": "Shop",
+  "entertainment": "Entertainment",
+  "contact": "Contact",
+  "visitUsToday": "Visit Us Today!",
+  "showAll": "Show All",
+  "discover": "Discover",
+  "viewAllBrands": "View All Brands",
+  "viewGallery": "View Gallery",
+  "submitRegistration": "Submit Registration",
+  "sendUsAMessage": "Send Us A Message",
+  "submit": "Submit"
 }

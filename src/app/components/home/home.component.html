@@ -22,17 +22,17 @@
                     data-animation-in="fadeInRight"
                     data-delay-in="0.2"
                   >
-                    Live the Art of Living
+                    {{ "liveTheArtOfLiving" | translate }}
                   </h1>
-                  <p class="text-white">at the Art of Living Mall</p>
-                  <!-- <p class="animated title text-white mb-3 fw-normal" data-animation-in="fadeInRight">
-                        			</p> -->
+                  <p class="text-white">
+                    {{ "atTheArtOfLivingMall" | translate }}
+                  </p>
                   <a
                     [routerLink]="['/shop']"
                     class="btn"
                     data-animation-in="fadeInUp"
                   >
-                    Visit Us Today!
+                    {{ "visitUsToday" | translate }}
                   </a>
                 </div>
               </div>
@@ -277,7 +277,8 @@
       [routerLink]="['/product']"
       style="margin: auto; display: table; border: 1px solid #c10016"
       class="btn"
-      >View All Brands</a
+    >
+      {{ "viewAllBrands" | translate }}</a
     >
   </div>
 </section>
@@ -296,7 +297,9 @@
             />
             <figcaption>
               <h2>Book Your Shopping Advisor</h2>
-              <a [routerLink]="['/advisor']" class="btn">Show All</a>
+              <a [routerLink]="['/advisor']" class="btn">{{
+                "showAll" | translate
+              }}</a>
             </figcaption>
           </figure>
           <div class="sec2Slider">
@@ -338,7 +341,7 @@
           Prepare your taste buds for a delightful culinary adventure amidst of
           exciting shopping experience.
         </p>
-        <a [routerLink]="['/dine']" class="btn">Discover</a>
+        <a [routerLink]="['/dine']" class="btn">{{ "discover" | translate }}</a>
       </figcaption>
     </figure>
   </div>
@@ -363,7 +366,9 @@
                   sure to <br />
                   captivate visitors of all ages, stay updated.
                 </p>
-                <a [routerLink]="['/events']" class="btn"> Discover </a>
+                <a [routerLink]="['/events']" class="btn">
+                  {{ "discover" | translate }}
+                </a>
               </figcaption>
             </figure>
           </div>
@@ -390,7 +395,7 @@
           exclusive blog—your gateway to a world where art, living, and
           creativity intersect.
         </p>
-        <a [routerLink]="['/blog']" class="btn">Discover</a>
+        <a [routerLink]="['/blog']" class="btn">{{ "discover" | translate }}</a>
       </figcaption>
     </figure>
   </div>

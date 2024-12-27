@@ -1,10 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-partner',
   templateUrl: './partner.component.html',
-  styleUrl: './partner.component.css'
+  styleUrl: './partner.component.css',
 })
-export class PartnerComponent {
+export class PartnerComponent implements OnInit {
+  constructor(private titleService: Title, private metaService: Meta) {}
 
+  ngOnInit(): void {
+    this.updateMetaTags(
+      'partner ',
+      'Event Details, Activities, Angular',
+      'This is the Event Details page description.'
+    );
+  }
+  private updateMetaTags(title: string, keywords: string, description: string) {
+    this.titleService.setTitle(title);
+
+    this.metaService.updateTag({ name: 'keywords', content: keywords });
+    this.metaService.updateTag({ name: 'description', content: description });
+  }
 }

@@ -139,18 +139,30 @@
               <ul
                 class="menu d-flex justify-content-start justify-content-xl-between align-items-center flex-row flex-wrap my-3 my-md-0"
               >
-                <li><a [routerLink]="['/']">Home</a></li>
-                <li><a [routerLink]="['/events']">Events</a></li>
                 <li>
-                  <a [routerLink]="['/about']">About The Mall</a>
-                </li>
-                <li><a [routerLink]="['/dine']">Dine</a></li>
-                <li><a href="https://artoflivingmall.com/shop">Shop</a></li>
-                <li>
-                  <a [routerLink]="['/entertainment']">Entertainment</a>
+                  <a [routerLink]="['/']">{{ "home" | translate }}</a>
                 </li>
                 <li>
-                  <a [routerLink]="['/designers']">Designers Club</a>
+                  <a [routerLink]="['/events']">{{ "events" | translate }}</a>
+                </li>
+                <li>
+                  <a [routerLink]="['/about']">{{
+                    "aboutTheMall" | translate
+                  }}</a>
+                </li>
+                <li>
+                  <a [routerLink]="['/dine']">{{ "dine" | translate }}</a>
+                </li>
+                <li><a href="https://artoflivingmall.com/shop">{{'shop'|translate}}</a></li>
+                <li>
+                  <a [routerLink]="['/entertainment']">{{
+                    "entertainment" | translate
+                  }}</a>
+                </li>
+                <li>
+                  <a [routerLink]="['/designers']">
+                    {{ "designersClub" | translate }}</a
+                  >
                 </li>
               </ul>
             </div>
@@ -170,7 +182,9 @@
                     placeholder="Enter Your Mail"
                     class="form-control"
                   />
-                  <button type="submit" class="btn mt-3">Subscribe</button>
+                  <button type="submit" class="btn mt-3">
+                    {{ "discover" | translate }}
+                  </button>
                 </div>
               </form>
             </div>

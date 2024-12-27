@@ -753,7 +753,9 @@
                 />
 
                 <div class="col-md-4">
-                  <button type="submit" class="btn mb-3 mb-lg-5">submit</button>
+                  <button type="submit" class="btn mb-3 mb-lg-5">
+                    {{ "submit" | translate }}
+                  </button>
                 </div>
               </div>
             </div>
@@ -778,7 +780,9 @@
             <figcaption>
               <h2>Book Your Shopping Advisor</h2>
 
-              <a [routerLink]="['/offers']" class="btn">Show All</a>
+              <a [routerLink]="['/offers']" class="btn">{{
+                "showAll" | translate
+              }}</a>
             </figcaption>
           </figure>
 
@@ -800,7 +804,9 @@
           <figcaption>
             <h2>Kids Furniture</h2>
 
-            <a [routerLink]="['/kidsbrand']" class="btn">Discover</a>
+            <a [routerLink]="['/kidsbrand']" class="btn">{{
+              "discover" | translate
+            }}</a>
           </figcaption>
         </figure>
       </div>
