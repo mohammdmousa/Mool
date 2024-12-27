@@ -5,7 +5,6 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class LanguageService {
-  // BehaviorSubject to track the current language
   private languageSubject = new BehaviorSubject<string>('en');
   currentLanguage$ = this.languageSubject.asObservable();
 
