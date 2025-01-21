@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-declare var $: any; // لتعريف مكتبة jQuery
+declare var $: any;
 
 @Component({
   selector: 'app-events',

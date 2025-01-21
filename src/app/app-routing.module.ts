@@ -20,7 +20,6 @@ import { PartnerComponent } from './components/partner/partner.component';
 import { PlanComponent } from './components/plan/plan.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { BrandComponent } from './components/brand/brand.component';
-
 const routes: Routes = [
   {
     path: '',
@@ -47,7 +46,7 @@ const routes: Routes = [
     component: BrandComponent,
   },
   {
-    path: 'blogdetails',
+    path: 'blogdetails/:slug',
     component: BlogdetailsComponent,
   },
   {
@@ -118,5 +117,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+
 })
 export class AppRoutingModule {}

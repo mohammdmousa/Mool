@@ -13,7 +13,11 @@ export class HeaderComponent {
   constructor(
     private translate: TranslateService,
     private languageService: LanguageService
-  ) {}
+  ) {
+    this.languageService.currentLanguage$.subscribe((lang) => {
+      this.currentLang = lang;
+    });
+  }
 
   switchLanguage(lang: string) {
     // Update TranslateService
@@ -31,6 +35,8 @@ export class HeaderComponent {
     // Toggle language
     const newLang = this.currentLang === 'en' ? 'ar' : 'en';
     this.translate.use(newLang);
+    this.languageService.setLanguage(newLang);
+
     this.currentLang = newLang;
 
     // Update document direction and language attributes

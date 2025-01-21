@@ -8,8 +8,8 @@ export class LanguageService {
   private languageSubject = new BehaviorSubject<string>('en');
   currentLanguage$ = this.languageSubject.asObservable();
 
-  // Method to update the language
   setLanguage(lang: string) {
+    console.log('Language updated to:', lang); // تحقق من وصول القيمة الجديدة
     this.languageSubject.next(lang);
   }
 }
