@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { FetchDataService } from '../../services/fetch-data.service';
 import { LanguageService } from '../../services/language.service';
 import { error } from 'console';
+import { environment } from '../../../environments/environment';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-blogdetails',
   templateUrl: './blogdetails.component.html',
   styleUrl: './blogdetails.component.css',
 })
-export class BlogdetailsComponent implements OnInit {
+export class BlogdetailsComponent implements OnInit, OnDestroy {
   constructor(
     private titleService: Title,
     private metaService: Meta,
@@ -18,13 +20,14 @@ export class BlogdetailsComponent implements OnInit {
     private fetchData: FetchDataService,
     private LanguageService: LanguageService
   ) {}
-  currntLang: string = '';
+  currntLang: string = 'en';
   blogs: any[] = [];
   blog: any;
+  error: string[] = [];
   loading: boolean = false;
   slug: string | null = null;
-  api: string = 'http://152.42.233.17/api/blog/blogs';
-  // api: string = 'http://152.42.233.17/api/blog/blogs';
+  api: string = `${environment.API_BASE_URL}blog/blogs/`;
+  Subscription: Subscription[] = [];
 
   ngOnInit() {
     this.LanguageService.currentLanguage$.subscribe({
@@ -32,7 +35,7 @@ export class BlogdetailsComponent implements OnInit {
         this.currntLang = res;
       },
     });
-    this.route.params.subscribe((params: any) => {
+    this.route.params.subscribe((params) => {
       this.slug = params['slug'];
       if (this.slug) {
         this.getBlogDetails(this.slug);
@@ -44,25 +47,32 @@ export class BlogdetailsComponent implements OnInit {
     });
     this.getBlogs();
     this.updateMetaTags(
-      'Blog Details',
-      'Blog Details, Activities, Angular',
-      'This is the Blog Details page description.'
+      `blog${this.blog.id}`,
+      `${this.blog.slug}`,
+      `${this.blog.description}`
     );
   }
   getBlogs() {
-    return this.fetchData.getDAta(this.api).subscribe({
-      next: (res) => (this.blogs = res),
+    this.loading = true;
+    const subscibe = this.fetchData.getDAta(this.api).subscribe({
+      next: (res) => {
+        this.blogs = res;
+      },
       error: (err) => {
+        this.error = err;
         console.log(err);
+        this.loading = false;
       },
       complete: () => {
-        console.log('sucss');
+        this.loading = false;
+        console.log('Request completed.');
       },
     });
+    this.Subscription.push(subscibe);
   }
   getBlogDetails(slug: string): void {
     this.loading = true;
-    this.fetchData.getDAta(this.api).subscribe({
+    const subscibe = this.fetchData.getDAta(this.api).subscribe({
       next: (res) => {
         const blog = res.find((item: any) => item.slug === slug);
         if (blog) {
@@ -73,20 +83,22 @@ export class BlogdetailsComponent implements OnInit {
         }
       },
       error: (err) => {
+        this.error = err;
         console.error('Error fetching blogs:', err);
       },
       complete: () => {
         this.loading = false;
       },
     });
+    this.Subscription.push(subscibe);
   }
 
   private updateMetaTags(title: string, keywords: string, description: string) {
-    // تحديث العنوان
     this.titleService.setTitle(title);
-
-    // تحديث أو إضافة كلمات المفتاحية والوصف
     this.metaService.updateTag({ name: 'keywords', content: keywords });
     this.metaService.updateTag({ name: 'description', content: description });
+  }
+  ngOnDestroy(): void {
+    this.Subscription.forEach((sub) => sub.unsubscribe());
   }
 }

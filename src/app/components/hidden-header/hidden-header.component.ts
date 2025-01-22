@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-hidden-header',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './hidden-header.component.css',
 })
 export class HiddenHeaderComponent {
+  currentLang: string = '';
+  constructor (private languageService: LanguageService) {
+      this.languageService.currentLanguage$.subscribe((lang) => {
+        this.currentLang = lang;
+      });
+  }
   closeOffcanvas() {
     const offcanvas = document.getElementById('fixedHeader');
     const offcanvasBackdrops =

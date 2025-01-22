@@ -1,0 +1,25 @@
+.page-not-found {
+  text-align: center;
+  margin: 100px 0;
+}
+
+.animated-text {
+  font-size: 3rem;
+  color: #ff4757;
+  animation: shake 1.5s infinite;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+}

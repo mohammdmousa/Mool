@@ -40,6 +40,9 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 import { BrandComponent } from './components/brand/brand.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 // Function for the TranslateHttpLoader
 export function HttpLoaderFactory(http: HttpClient) {
@@ -73,6 +76,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     KidsbrandComponent,
     CaffeineComponent,
     BrandComponent,
+    LoaderComponent,
+    BannerComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

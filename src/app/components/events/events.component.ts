@@ -1,5 +1,8 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { environment } from '../../../environments/environment';
+import { FetchDataService } from '../../services/fetch-data.service';
+import { LanguageService } from '../../services/language.service';
 declare var $: any;
 
 @Component({
@@ -8,7 +11,18 @@ declare var $: any;
   styleUrl: './events.component.css',
 })
 export class EventsComponent implements OnInit, AfterViewInit {
-  constructor(private titleService: Title, private metaService: Meta) {}
+  loading: boolean = true;
+  events: any[] = [];
+  error: string[] = [];
+  api: string = `${environment.API_BASE_URL}event/events/`;
+  currntLang: string = 'en';
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+    private fetchData: FetchDataService,
+    private LanguageService: LanguageService
+  ) {}
+
   ngAfterViewInit(): void {
     $('.events-slider').slick({
       autoplay: true,
@@ -32,10 +46,36 @@ export class EventsComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.updateMetaTags(
-      'Event',
+      'Event | The Art Of Living Mall',
       'Event, Activities, Angular',
       'This is the Event page description.'
     );
+    this.LanguageService.currentLanguage$.subscribe({
+      next: (res) => {
+        this.currntLang = res;
+      },
+    });
+    this.getEvents();
+  }
+
+  getEvents(): void {
+    this.loading = true;
+
+    this.fetchData.getDAta(this.api).subscribe({
+      next: (res) => {
+        this.events = res;
+        console.log('Data fetched successfully:', this.events);
+      },
+      error: (err) => {
+        this.error = err.message;
+        console.error('Error fetching events:', err.message);
+        this.loading = false;
+      },
+      complete: () => {
+        this.loading = false;
+        console.log('Request completed.');
+      },
+    });
   }
   private updateMetaTags(title: string, keywords: string, description: string) {
     this.titleService.setTitle(title);

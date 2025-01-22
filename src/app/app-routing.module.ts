@@ -20,6 +20,7 @@ import { PartnerComponent } from './components/partner/partner.component';
 import { PlanComponent } from './components/plan/plan.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { BrandComponent } from './components/brand/brand.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 const routes: Routes = [
   {
     path: '',
@@ -46,7 +47,7 @@ const routes: Routes = [
     component: BrandComponent,
   },
   {
-    path: 'blogdetails/:slug',
+    path: 'blog_details/:slug',
     component: BlogdetailsComponent,
   },
   {
@@ -80,7 +81,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'events',
+    path: 'event',
     component: EventsComponent,
   },
   {
@@ -112,11 +113,14 @@ const routes: Routes = [
     path: 'shop',
     component: ShopComponent,
   },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-
 })
 export class AppRoutingModule {}

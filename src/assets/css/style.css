@@ -1,6 +1,13 @@
 body{background: #D0D3D4;padding-right: 0 !important; overflow: auto !important;}
 figure{margin:0}
 
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
 .link{display: flex;flex-direction: row;align-items: center;}
 .link img{transition: 0.5s;margin-left: 0.5rem;}
 .link:hover img{transform: translateX(0.5rem);}

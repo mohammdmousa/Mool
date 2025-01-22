@@ -23,5 +23,18 @@
   "submitRegistration": "Submit Registration",
   "sendUsAMessage": "Send Us A Message",
   "submit": "Submit",
-  "view more":"View More"
+  "view more":"View More",
+  "Admin":"Admin",
+  "Related Blogs":"Related Blogs",
+  "PAGE_NOT_FOUND": {
+    "TITLE": "404 - Page Not Found",
+    "MESSAGE": "Sorry, the page you are looking for does not exist.",
+    "HOME_BUTTON": "Go to Home"
+
+  },
+  "Newsletter":"News letter",
+   "shopsComingSoon": "Shops Coming Soon",
+  "stayTunedMoreShops": "Be sure to stay tuned as we have more shops opening soon."
+
+
 }
