@@ -95,7 +95,7 @@
 
         <tr>
           <td>
-            <a [routerLink]="['/about']" (click)="closeOffcanvas()">
+            <a [routerLink]="['/mall']" (click)="closeOffcanvas()">
               {{ "aboutTheMall" | translate }}
               <img
                 src="assets/images/canvasSvg.svg"
@@ -203,7 +203,10 @@
 
         <tr>
           <td>
-            <a [routerLink]="['/designers']" (click)="closeOffcanvas()">
+            <a
+              [routerLink]="['/designer-application']"
+              (click)="closeOffcanvas()"
+            >
               Designers Club
               <img
                 src="assets/images/canvasSvg.svg"

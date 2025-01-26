@@ -31,7 +31,7 @@ const routes: Routes = [
     component: ProductsComponent,
   },
   {
-    path: 'about',
+    path: 'mall',
     component: AboutComponent,
   },
   {
@@ -63,7 +63,7 @@ const routes: Routes = [
     component: ContactComponent,
   },
   {
-    path: 'designers',
+    path: 'designer-application',
     component: DesignersComponent,
   },
   {

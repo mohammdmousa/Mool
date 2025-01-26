@@ -11,7 +11,7 @@ export class EntertainmentComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateMetaTags(
-      'Entertainment',
+      'Entertainment | Art Of Living Mall',
       'Entertainment, Activities, Angular',
       'This is the Entertainment page description.'
     );

@@ -11,7 +11,7 @@ export class PlanComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateMetaTags(
-      'plan ',
+      'plan | Art Of Living Mall',
       'Event Details, Activities, Angular',
       'This is the Event Details page description.'
     );

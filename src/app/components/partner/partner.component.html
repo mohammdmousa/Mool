@@ -5,218 +5,294 @@
       <div class="modal-content">
         <form
           enctype="multipart/form-data"
-          action="https://artoflivingmall.com/partnerForm"
-          method="post"
           id="partnerForm"
+          #partner="ngForm"
+          (ngSubmit)="onSubmit(partner)"
         >
-          <input
-            type="hidden"
-            name="_token"
-            value="umu4NHIPpqDqKZ5sMyJgdeUmXtW80HT17X5BV0Xs"
-          />
           <div class="modal-body">
-            <h2 class="mb-4 text-center">Be A Partner</h2>
+            <h2 class="mb-4 text-center">{{ "submitRegistration" | translate }}</h2>
 
             <div class="row g-4">
               <!-- Tenant Category -->
               <div class="form-group col-12 col-md-6">
                 <label class="form-label mb-1">
-                  Tenant Category <sup class="text-danger">*</sup>
+                  {{ "tenantCategory" | translate }} <sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="text"
-                  name="day"
+                  name="category"
+                  ngModel
+                  #tenant="ngModel"
                   class="form-control"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
                   required
                 />
+                <div
+                  *ngIf="tenant.invalid && tenant.touched"
+                  class="text-danger"
+                >
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Brand Name -->
               <div class="form-group col-12 col-md-6">
                 <label class="form-label mb-1">
-                  Brand Name<sup class="text-danger">*</sup>
+                  {{ "brandName" | translate }}<sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="text"
                   name="brand_name"
                   class="form-control"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
+                  ngModel
+                  #brand_name="ngModel"
                   required
                 />
+                <div
+                  *ngIf="brand_name.invalid && brand_name.touched"
+                  class="text-danger"
+                >
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Trade License -->
               <div class="form-group col-12 col-md-6">
                 <label class="form-label mb-1">
-                  Trade License No.<sup class="text-danger">*</sup>
+                  {{ "tradeLicense" | translate }}<sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="text"
                   name="license"
                   class="form-control"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
+                  ngModel
+                  #license="ngModel"
                   required
                 />
+                <div
+                  *ngIf="license.invalid && license.touched"
+                  class="text-danger"
+                >
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Owner/Franchise -->
               <div class="form-group col-12 col-md-6">
                 <label class="form-label mb-1">
-                  Owner/Franchise <sup class="text-danger">*</sup>
+                  {{ "ownerFranchise" | translate }} <sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="text"
                   name="owner"
+                  ngModel
+                  #owner="ngModel"
                   class="form-control"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
                   required
                 />
+                <div *ngIf="owner.invalid && owner.touched" class="text-danger">
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Physical Address -->
               <div class="form-group col-12">
                 <label class="form-label mb-1">
-                  Physical Address <sup class="text-danger">*</sup>
+                  {{ "physicalAddress" | translate }} <sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="text"
                   name="address"
+                  ngModel
+                  #address="ngModel"
                   class="form-control"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
                   required
                 />
+                <div
+                  *ngIf="address.invalid && address.touched"
+                  class="text-danger"
+                >
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Key Personnel -->
               <div class="form-group col-12">
                 <label class="form-label mb-1">
-                  Name of the key Personnel (Mr. / Mrs.)
+                  {{ "keyPersonnel" | translate }}
                   <sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="text"
                   name="name"
+                  ngModel
+                  #name="ngModel"
                   class="form-control"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
                   required
                 />
+                <div *ngIf="name.invalid && name.touched" class="text-danger">
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Phone -->
               <div class="form-group col-12 col-md-6">
                 <label class="form-label mb-1">
-                  Phone<sup class="text-danger">*</sup>
+                  {{ "phone" | translate }}<sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="number"
                   name="phone"
+                  ngModel
+                  #phone="ngModel"
                   class="form-control phoneNo2"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
                   required
                 />
-                <span id="phoneValid2" style="color: red"></span>
+                <div *ngIf="phone.invalid && phone.touched" class="text-danger">
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Email -->
               <div class="form-group col-12 col-md-6">
                 <label class="form-label mb-1">
-                  Email<sup class="text-danger">*</sup>
+                  {{ "email" | translate }}<sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="email"
                   name="email"
+                  ngModel
+                  #email="ngModel"
                   class="form-control"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
                   required
                 />
+                <div *ngIf="email.invalid && email.touched" class="text-danger">
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Website -->
               <div class="form-group col-12">
                 <label class="form-label mb-1">
-                  Website Address <sup class="text-danger">*</sup>
+                  {{ "website" | translate }} <sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="text"
                   name="web"
+                  ngModel
                   class="form-control"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
                   required
+                  #web="ngModel"
                 />
+                <div *ngIf="web.invalid && web.touched" class="text-danger">
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Business Years -->
               <div class="form-group col-12 col-md-6">
                 <label class="form-label mb-1">
-                  Number of years in business <sup class="text-danger">*</sup>
+                  {{ "businessYears" | translate }} <sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="number"
                   min="1"
                   name="business_years"
+                  ngModel
                   class="form-control"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
                   required
+                  #business_years="ngModel"
                 />
+                <div
+                  *ngIf="business_years.invalid && business_years.touched"
+                  class="text-danger"
+                >
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Existing Outlets -->
               <div class="form-group col-12 col-md-6">
                 <label class="form-label mb-1">
-                  Number of existing outlets (Location/Size)
+                  {{ "existingOutlets" | translate }}
                   <sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="text"
                   name="outlets"
+                  ngModel
                   class="form-control"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
                   required
+                  #outlets="ngModel"
                 />
+                <div
+                  *ngIf="outlets.invalid && outlets.touched"
+                  class="text-danger"
+                >
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Shop Size -->
               <div class="form-group col-12 col-md-6">
                 <label class="form-label mb-1">
-                  Requested Shop Size in Square Feet
+                  {{ "shopSize" | translate }}
                   <sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="number"
                   min="1"
                   name="shop_size"
+                  ngModel
                   class="form-control"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
                   required
                 />
+                <div
+                  *ngIf="outlets.invalid && outlets.touched"
+                  class="text-danger"
+                >
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Rent -->
               <div class="form-group col-12 col-md-6">
                 <label class="form-label mb-1">
-                  Target rent per square feet <sup class="text-danger">*</sup>
+                  {{ "rent" | translate }} <sup class="text-danger">*</sup>
                 </label>
                 <input
                   type="number"
                   min="1"
                   name="rent"
+                  ngModel
                   class="form-control"
-                  placeholder="Enter Here"
+                  placeholder="{{ 'message_required' | translate }}"
                   required
+                  #rent="ngModel"
                 />
+                <div *ngIf="rent.invalid && rent.touched" class="text-danger">
+                  {{ "message_required" | translate }}
+                </div>
               </div>
 
               <!-- Captcha -->
-              <div class="form-group col-12">
-                <div
-                  class="g-recaptcha"
-                  data-sitekey="6LdAaiUoAAAAAAcjqjPHQgg2QH6CSfNy67QFRq9h"
-                ></div>
-              </div>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100 mt-4">
+            <button
+              [disabled]="partner.invalid"
+              class="btn btn-primary w-100 mt-4"
+            >
               {{ "submitRegistration" | translate }}
             </button>
           </div>

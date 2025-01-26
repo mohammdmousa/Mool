@@ -7,8 +7,15 @@
   <app-loader></app-loader>
 </div>
 <ng-template #content>
-  <div *ngIf="error.length" class="alert alert-danger" role="alert">
-    Some Thing Is Happning When Fetch Data
+  <div
+    *ngIf="error.length"
+    class="alert alert-danger d-flex align-items-center"
+    role="alert"
+  >
+    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:">
+      <use xlink:href="#exclamation-triangle-fill" />
+    </svg>
+    <div>Some Thing Is Happning When Fetch Data</div>
   </div>
   <section
     *ngIf="blog"
