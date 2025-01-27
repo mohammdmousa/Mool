@@ -3,8 +3,8 @@
     <div class="gallery">
       <figure>
         <img
-          src="https://artoflivingmall.com/images/media/2024/10/OtHIh28708.png"
-          data-src="https://artoflivingmall.com/images/media/2024/10/OtHIh28708.png"
+          src="assets/images/home.png"
+          data-src="assets/images/home.png"
           alt="Live the Art of Living"
           class="full-image animated"
           data-animation-in="zoomInImage"
@@ -44,37 +44,7 @@
   </div>
   <div class="scroll-down">
     <a href="#sec1">
-      <svg
-        version="1.1"
-        id="Layer_1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        x="0px"
-        y="0px"
-        viewBox="0 0 50 50"
-        style="enable-background: new 0 0 50 50"
-        xml:space="preserve"
-      >
-        <style type="text/css">
-          .st0 {
-            fill: none;
-            stroke: #ffffff;
-            stroke-miterlimit: 10;
-          }
-          .st1 {
-            fill: #ffffff;
-          }
-        </style>
-        <path
-          class="st0"
-          d="M11.5,15.7c0-7.5,6-13.5,13.5-13.5s13.5,6,13.5,13.5v18.2c0,7.5-6,13.5-13.5,13.5s-13.5-6-13.5-13.5V15.7z"
-        />
-        <g>
-          <circle id="circle1" class="st1" cx="25" cy="17.3" r="2.4" />
-          <circle id="circle2" class="st1" cx="25" cy="24.8" r="2.4" />
-          <circle id="circle3" class="st1" cx="25" cy="32.3" r="2.4" />
-        </g>
-      </svg>
+      <img src="assets/images/down.svg" alt="" />
     </a>
   </div>
 </section>
@@ -82,193 +52,25 @@
 <section class="main-section home-section-one dark" id="sec1">
   <div class="container">
     <div class="main-heading">
-      <h2>Discover Shops</h2>
+      <h2>{{ "Discover Shops" | translate }}</h2>
     </div>
     <div class="row justify-content-center">
-      <div class="col-6 col-md-3 mb-5">
+      <div class="col-6 col-md-3 mb-5" *ngFor="let categorie of categories">
         <a [routerLink]="['/brand']">
           <figure>
             <img
               class="w-100"
-              src="https://artoflivingmall.com/images/media/2023/11/jGjJk27601.webp"
+              src="http://152.42.233.17{{ categorie.image }}"
               height="338px"
               width="338px"
-              alt="Modern"
+              alt="*"
             />
           </figure>
           <figcaption class="sec1Wrap text-center mt-3">
-            <h4 class="mb-1">Modern</h4>
-            <span class="btnLnk">Discover</span>
-          </figcaption>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-5">
-        <a [routerLink]="['/brand']">
-          <figure>
-            <img
-              class="w-100"
-              src="https://artoflivingmall.com/images/media/2023/07/ohQcy13312.webp"
-              height="338px"
-              width="338px"
-              alt="Semi Classic"
-            />
-          </figure>
-          <figcaption class="sec1Wrap text-center mt-3">
-            <h4 class="mb-1">Semi Classic</h4>
-            <span class="btnLnk">Discover</span>
-          </figcaption>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-5">
-        <a [routerLink]="['/brand']">
-          <figure>
-            <img
-              class="w-100"
-              src="https://artoflivingmall.com/images/media/2023/07/MqEju13712.webp"
-              height="338px"
-              width="338px"
-              alt="Classic"
-            />
-          </figure>
-          <figcaption class="sec1Wrap text-center mt-3">
-            <h4 class="mb-1">Classic</h4>
-            <span class="btnLnk">Discover</span>
-          </figcaption>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-5">
-        <a [routerLink]="['/brand']">
-          <figure>
-            <img
-              class="w-100"
-              src="https://artoflivingmall.com/images/media/2023/07/quExY13612.webp"
-              height="338px"
-              width="338px"
-              alt="Kids Furniture"
-            />
-          </figure>
-          <figcaption class="sec1Wrap text-center mt-3">
-            <h4 class="mb-1">Kids Furniture</h4>
-            <span class="btnLnk">Discover</span>
-          </figcaption>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-5">
-        <a [routerLink]="['/brand']">
-          <figure>
-            <img
-              class="w-100"
-              src="https://artoflivingmall.com/images/media/2023/07/YpbwY13812.webp"
-              height="338px"
-              width="338px"
-              alt="Accessories"
-            />
-          </figure>
-          <figcaption class="sec1Wrap text-center mt-3">
-            <h4 class="mb-1">Accessories</h4>
-            <span class="btnLnk">Discover</span>
-          </figcaption>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-5">
-        <a [routerLink]="['/brand']">
-          <figure>
-            <img
-              class="w-100"
-              src="https://artoflivingmall.com/images/media/2023/07/gFEyF13912.webp"
-              height="338px"
-              width="338px"
-              alt="Outdoor Furniture"
-            />
-          </figure>
-          <figcaption class="sec1Wrap text-center mt-3">
-            <h4 class="mb-1">Outdoor Furniture</h4>
-            <span class="btnLnk">Discover</span>
-          </figcaption>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-5">
-        <a [routerLink]="['/brand']">
-          <figure>
-            <img
-              class="w-100"
-              src="https://artoflivingmall.com/images/media/2023/07/pyIl813112.webp"
-              height="338px"
-              width="338px"
-              alt="Mattresses"
-            />
-          </figure>
-          <figcaption class="sec1Wrap text-center mt-3">
-            <h4 class="mb-1">Mattresses</h4>
-            <span class="btnLnk">Discover</span>
-          </figcaption>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-5">
-        <a [routerLink]="['/brand']">
-          <figure>
-            <img
-              class="w-100"
-              src="https://artoflivingmall.com/images/media/2023/09/rIRar05405.png"
-              height="338px"
-              width="338px"
-              alt="Carpets"
-            />
-          </figure>
-          <figcaption class="sec1Wrap text-center mt-3">
-            <h4 class="mb-1">Carpets</h4>
-            <span class="btnLnk">Discover</span>
-          </figcaption>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-5">
-        <a [routerLink]="['/brand']">
-          <figure>
-            <img
-              class="w-100"
-              src="https://artoflivingmall.com/images/media/2023/11/0fKVx27301.webp"
-              height="338px"
-              width="338px"
-              alt="Flooring"
-            />
-          </figure>
-          <figcaption class="sec1Wrap text-center mt-3">
-            <h4 class="mb-1">Flooring</h4>
-            <span class="btnLnk">Discover</span>
-          </figcaption>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-5">
-        <a [routerLink]="['/brand']">
-          <figure>
-            <img
-              class="w-100"
-              src="https://artoflivingmall.com/images/media/2023/11/6fYzR27301.webp"
-              height="338px"
-              width="338px"
-              alt="Kitchens"
-            />
-          </figure>
-          <figcaption class="sec1Wrap text-center mt-3">
-            <h4 class="mb-1">Kitchens</h4>
-            <span class="btnLnk">Discover</span>
-          </figcaption>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-5">
-        <a [routerLink]="['/brand']">
-          <figure>
-            <img
-              class="w-100"
-              src="https://artoflivingmall.com/images/media/2024/04/CG90c22505.png"
-              height="338px"
-              width="338px"
-              alt="Lightings"
-            />
-          </figure>
-          <figcaption class="sec1Wrap text-center mt-3">
-            <h4 class="mb-1">Lightings</h4>
-            <span class="btnLnk">Discover</span>
+            <h4 class="mb-1">
+              {{ currntLang == "en" ? categorie.title_en : categorie.title_ar }}
+            </h4>
+            <span class="btnLnk">{{ "Discover" | translate }}</span>
           </figcaption>
         </a>
       </div>
@@ -318,14 +120,15 @@
     <div class="row justify-content-center">
       <div class="col-md-10 col-lg-8">
         <div class="main-heading">
-          <h2 class="mb-4">Shops Coming Soon</h2>
-          <p>Be sure to stay tuned as we have more shops opening soon.</p>
+          <h2 class="mb-4">{{ "shopsComingSoon" | translate }}</h2>
+          <p>{{ "stayTunedMoreShops" | translate }}</p>
         </div>
         <div class="sec3Slider"></div>
       </div>
     </div>
   </div>
 </section>
+
 <section class="main-section home-section-four home-section-two">
   <div class="container-fluid g-0">
     <figure class="sec2Inr">
@@ -336,16 +139,18 @@
         alt="Dine"
       />
       <figcaption>
-        <h2>Dine</h2>
+        <h2>{{ "dine" | translate }}</h2>
         <p>
-          Prepare your taste buds for a delightful culinary adventure amidst of
-          exciting shopping experience.
+          {{ "dined2" | translate }}
         </p>
-        <a [routerLink]="['/dine']" class="btn">{{ "discover" | translate }}</a>
+        <a [routerLink]="['/dines']" class="btn">{{
+          "discover" | translate
+        }}</a>
       </figcaption>
     </figure>
   </div>
 </section>
+
 <section class="main-section home-section-five home-section-two">
   <div class="container">
     <div class="row justify-content-center">
@@ -354,7 +159,7 @@
           <div class="sec5Slider">
             <figure class="sec2Inr">
               <img
-                src="https://artoflivingmall.com/images/media/2023/07/YOYBf13912.webp"
+                src="assets/images/sec5Img.png"
                 height="781px"
                 width="770px"
                 alt="Events Calendar"
@@ -377,23 +182,22 @@
     </div>
   </div>
 </section>
+
 <section
   class="main-section home-section-four home-section-six home-section-two"
 >
   <div class="container-fluid g-0">
     <figure class="sec2Inr">
       <img
-        src="https://artoflivingmall.com/images/media/2023/11/9gOIs27701.webp"
+        src="assets/images/blogBnr.jpg"
         height="662px"
         width="1588px"
         alt="Blog"
       />
       <figcaption>
-        <h2>Blog</h2>
+        <h2>{{ "blog" | translate }}</h2>
         <p>
-          Explore the realms of design, lifestyle, and inspiration in our
-          exclusive blog—your gateway to a world where art, living, and
-          creativity intersect.
+          {{ "blogd" | translate }}
         </p>
         <a [routerLink]="['/blog']" class="btn">{{ "discover" | translate }}</a>
       </figcaption>

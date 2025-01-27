@@ -44,6 +44,8 @@
   "ERROR_TITLE": "Error!",
   "ERROR_MESSAGE": "An error occurred while completing the operation.",
   "CONFIRM_BUTTON": "OK",
+"Events Calendar":"Events Calendar",
+"eventd":"The mall is buzzing with an exciting lineup of events that are sure to captivate visitors of all ages, stay updated.",
     "Be A Partner":"Be A Partner",
   "art_of_living_description1": "The Art of Living is proud to be the first and biggest furniture, home appliance, and home accessories shopping mall in the MENA region. The Art of Living Mall was shaped after extensive collaboration with retail industry professionals to offer a creative environment that goes above and beyond what is often seen in shopping malls. It has a soul of its own, a heart that beats, and a very unique sense of style.",
   "art_of_living_description2": "The conception of the Art of Living Mall was influenced by several causes. The horizontal city expansion along Sheikh Zayed Road, which divided the furniture market into several locations, was one of the key market factors in the United Arab Emirates that gave origin to the idea. The extreme heat affected the customers, and they had a hard time finding parking. The Art of Living Mall is a one-stop solution for all of your furniture and home décor requirements, with free parking in the basement and a welcoming atmosphere.",
@@ -71,8 +73,16 @@
   "no_pets": "No pets allowed.",
   "no_dangerous_activities": "No dangerous activities in the mall like sport games...",
   "be_a_partner": "Be A Partner",
-  "partner_description": "Do you want to open a shop in the Art of Living Mall..."
-    ,
+  "partner_description": "Do you want to open a shop in the Art of Living Mall...",
+"blogd":"Explore the realms of design, lifestyle, and inspiration in ourexclusive blog—your gateway to a world where art, living, andcreativity intersect.",
+  "dined":"Indulge in delicious dining at your favorite restaurant amidst an exciting shopping adventure",
+  "dined2":"Prepare your taste buds for a delightful culinary adventure amidst of exciting shopping experience.",
+  "Restaurant":"Restaurant",
+  "cafe":"Cafe",
+  "Caffeine":"Caffeine",
+  "seelocation":"See Locatoin",
+  "Ground Floor":"Ground Floor",
+  "caffeind":"Caffeine Coffee Roaster is a specialty coffee shop/roastery, with 13 branches in UAE, Beirut, and Turkey. We pride ourselves on high-end specialty coffee sourcing, roasting, and brewing since 2015. In addition to more than 40 coffee-based drinks, we offer a wide variety of specialty cakes daily prepared in our central kitchen in City Walk.",
   "entertainment": "Entertainment",
   "Kids Art Club":"Kids Art Club",
   "Kidsp1":"Located in the centre of the Art of Living Mall is the kids art club. Young artists may explore their imaginations, let their creativity run wild, and hone their artistic abilities in this cutting-edge and captivating area. Children of all ages and abilities are welcome at the club, which offers a welcoming environment for their artistic discovery. The group encourages students to explore with different mediums and methods and is stocked with a variety of art resources, including paintbrushes, canvases, clay, and sketching tools. There is something for every prospective artist, whether they choose painting, drawing, sculpture, or mixed media.",
@@ -105,6 +115,7 @@
   "visitUsToday": "Visit Us Today!",
   "showAll": "Show All",
   "discover": "Discover",
+  "Discover Shops":"Discover Shops",
   "viewAllBrands": "View All Brands",
   "viewGallery": "View Gallery",
   "submitRegistration": "Submit Registration",
@@ -117,11 +128,8 @@
     "TITLE": "404 - Page Not Found",
     "MESSAGE": "Sorry, the page you are looking for does not exist.",
     "HOME_BUTTON": "Go to Home"
-
   },
   "Newsletter":"News letter",
-   "shopsComingSoon": "Shops Coming Soon",
+  "shopsComingSoon": "Shops Coming Soon",
   "stayTunedMoreShops": "Be sure to stay tuned as we have more shops opening soon."
-
-
 }

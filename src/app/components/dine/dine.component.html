@@ -1,32 +1,14 @@
-<section class="inner-banner">
-  <figure>
-    <img
-      src="https://artoflivingmall.com/images/media/2023/06/YUpMK05712.png"
-      width="1525"
-      height="469"
-      alt="*"
-      class="w-100"
-    />
-
-    <figcaption>
-      <h2>Dine</h2>
-
-      <p>
-        Get ready for a delicious gourmet trip with your taste buds. Enjoy the
-        best flavors and ingredients to sate your appetite with high-quality
-        meals at your favorite restaurants.
-      </p>
-    </figcaption>
-  </figure>
-</section>
+<app-banner
+  [src]="'assets/images/dine-banner.png'"
+  [header]="'dine'"
+></app-banner>
 
 <section class="main-section dine-section-one">
   <div class="container">
     <div class="main-heading dark">
-      <h2 class="mb-4">Restaurants and Cafes</h2>
+      <h2 class="mb-4">{{ "restaurants_cafes" | translate }}</h2>
       <p>
-        Indulge in delicious dining at your favorite restaurant amidst an
-        exciting shopping adventure
+        {{ "dined" | translate }}
       </p>
     </div>
 
@@ -44,7 +26,7 @@
           role="tab"
           aria-controls="tab-2"
         >
-          Cafe
+          {{ "cafe" | translate }}
         </button>
       </li>
       <li class="nav-item" role="presentation">
@@ -56,7 +38,7 @@
           role="tab"
           aria-controls="tab-1"
         >
-          Restaurant
+          {{ "Restaurant" | translate }}
         </button>
       </li>
     </ul>
@@ -65,13 +47,11 @@
       <div class="tab-pane fade show active" id="tab-2" role="tabpanel">
         <div class="row">
           <div class="col-sm-6 col-md-4">
-            <a [routerLink]="['/caffeine']">
+            <a [routerLink]="['/dines-details', 'caffeine']">
               <figure class="mt-4">
-                <img
-                  src="https://artoflivingmall.com/images/media/2023/06/r9GoI15312.JPG"
-                />
+                <img src="assets/images/caffein.jpg" />
                 <figcaption class="mt-4">
-                  <h3>Caffeine</h3>
+                  <h3>{{ "Caffeine" | translate }}</h3>
                 </figcaption>
               </figure>
             </a>
@@ -82,14 +62,9 @@
         <div class="row justify-content-center">
           <div class="col-md-10 col-lg-8">
             <div class="main-heading">
-              <h2 class="mb-4">Be Our Partner</h2>
-              <a
-                href="javascript:;"
-                class="btn bg-white mt-1"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Be Our Partner
+              <h2 class="mb-4">{{ "be_a_partner" | translate }}</h2>
+              <a [routerLink]="['/partner']" class="btn bg-white mt-1">
+                {{ "be_a_partner" | translate }}
               </a>
             </div>
           </div>

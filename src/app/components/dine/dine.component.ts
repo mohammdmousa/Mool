@@ -11,7 +11,7 @@ export class DineComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateMetaTags(
-      'Dine',
+      'Dines | Art Of Living Mall',
       'Dine, Activities, Angular',
       'This is the Dine page description.'
     );

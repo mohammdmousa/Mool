@@ -1,0 +1,31 @@
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 50 50"
+        style="enable-background: new 0 0 50 50"
+        xml:space="preserve"
+      >
+        <style type="text/css">
+          .st0 {
+            fill: none;
+            stroke: #ffffff;
+            stroke-miterlimit: 10;
+          }
+          .st1 {
+            fill: #ffffff;
+          }
+        </style>
+        <path
+          class="st0"
+          d="M11.5,15.7c0-7.5,6-13.5,13.5-13.5s13.5,6,13.5,13.5v18.2c0,7.5-6,13.5-13.5,13.5s-13.5-6-13.5-13.5V15.7z"
+        />
+        <g>
+          <circle id="circle1" class="st1" cx="25" cy="17.3" r="2.4" />
+          <circle id="circle2" class="st1" cx="25" cy="24.8" r="2.4" />
+          <circle id="circle3" class="st1" cx="25" cy="32.3" r="2.4" />
+        </g>
+      </svg>

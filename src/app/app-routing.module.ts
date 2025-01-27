@@ -55,7 +55,7 @@ const routes: Routes = [
     component: BranddetailsComponent,
   },
   {
-    path: 'caffeine',
+    path: 'dines-details/:caffeine',
     component: CaffeineComponent,
   },
   {
@@ -67,7 +67,7 @@ const routes: Routes = [
     component: DesignersComponent,
   },
   {
-    path: 'dine',
+    path: 'dines',
     component: DineComponent,
   },
   {
